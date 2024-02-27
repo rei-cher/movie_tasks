@@ -1,0 +1,105 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7) !important; /* Slightly darker overlay for focus */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; /* High z-index to ensure overlay is above other content */
+    overflow-y: auto;
+  }
+  
+  .modal-content {
+    background-color: #212426 !important;
+    padding: 20px !important;
+    border-radius: 10px !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 600px; /* Maximum width with a margin for smaller screens */
+    position: relative; /* For positioning close button or other elements inside */
+    overflow-y: auto;
+    max-height: 99vh;
+  }
+  
+  .modal-header, .modal-body, .modal-footer {
+    padding: 10px 0;
+  }
+  
+  .modal-header {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eaeaea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .modal-title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #f9d3b4;
+  }
+  
+  .modal-close-btn {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 24px;
+    color: white;
+  }
+  
+  .modal-img {
+    width: 100%;
+    max-width: 500px; 
+    height: auto; 
+    object-fit: cover; 
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .modal-genres {
+    margin: 10px 0;
+    font-style: italic;
+    color: #dac6b5;
+  }
+  
+  .modal-description {
+    margin: 10px 0 30px 0;
+    color: #dac6b5;
+  }
+
+  .modal-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal-footer .button-group{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  /* Adjust button styles to match your Home.css */
+  .modal-button {
+    width: 150px;
+    height: 70px;
+    background-color: #dac6b5; /* Example button color */
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  .modal-button:hover {
+    background-color: #c79062;
+  }

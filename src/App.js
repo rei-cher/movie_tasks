@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+import React from 'react';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css';
+import Sidebar from './components/sidebar/Sidebar';
+import Home from './components/home/Home';
+import Watching from './components/watching/Watching';
+import Watched from './components/watched/Watched';
+import ToBeWatched from './components/to_be_watched/ToBeWatched'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+        <Sidebar/>
+        <Routes>
+          <Route path='/home' element={<Home/>}/>
+          <Route path='/watching' element={<Watching/>}/>
+          <Route path='/to-be-watched' element={<ToBeWatched userEmail={'p4shage@gmail.com'}/>}/>
+          <Route path='/watched' element={<Watched/>}/>
+          <Route path='/' element={<Home/>}/>
+        </Routes>
+    </Router>
   );
 }
 
