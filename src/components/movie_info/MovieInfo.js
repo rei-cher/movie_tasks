@@ -16,7 +16,7 @@ const MovieInfo = ({movie, onAddToWatchLater, onAddToWatchingNow, onAddToWatched
                 return btnName !== 'watchLater';
             case '/watching':
                 return btnName !== 'watchNow';
-            case 'watched':
+            case '/watched':
                 return btnName !== 'watched';
             default:
                 return true;
