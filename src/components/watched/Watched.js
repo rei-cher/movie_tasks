@@ -106,7 +106,7 @@ const Watched = ({userEmail}) => {
                 <MovieInfo
                   movie={selectedMovie}
                   onAddToWatchLater={handleAddToWatchLater}
-                  onAddToWathingNow={handleAddToWatchingNow}
+                  onAddToWatchingNow={handleAddToWatchingNow}
                   onClose = {() => setIsInfoVisible(false)}
                 />
               </div>
