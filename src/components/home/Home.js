@@ -78,6 +78,7 @@ const Home = () => {
           movieData: movie,
         }),
       });
+      alert('Movie added to watching now');
     } catch(err){
       console.error('Failed to add movie to watching now: ', err);
     }
@@ -97,6 +98,7 @@ const Home = () => {
           movieData: movie,
         }),
       });
+      alert('Movie added to watched');
     } catch(err){
       console.error('Failed to add movie to watched: ', err);
     }
@@ -153,7 +155,7 @@ const Home = () => {
               <MovieInfo
                 movie={selectedMovie}
                 onAddToWatchLater={handleAddToWatchLater}
-                onAdddToWathingNow={handleAddToWatchingNow}
+                onAddToWatchingNow={handleAddToWatchingNow}
                 onAddToWatched = {handleAddToWatched}
                 onClose={() => setIsInfoVisible(false)}
               />

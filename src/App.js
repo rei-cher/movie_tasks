@@ -13,9 +13,9 @@ function App() {
         <Sidebar/>
         <Routes>
           <Route path='/home' element={<Home/>}/>
-          <Route path='/watching' element={<Watching/>}/>
+          <Route path='/watching' element={<Watching userEmail={'p4shage@gmail.com'}/>}/>
           <Route path='/to-be-watched' element={<ToBeWatched userEmail={'p4shage@gmail.com'}/>}/>
-          <Route path='/watched' element={<Watched/>}/>
+          <Route path='/watched' element={<Watched userEmail={'p4shage@gmail.com'}/>}/>
           <Route path='/' element={<Home/>}/>
         </Routes>
     </Router>

@@ -28,6 +28,57 @@ const ToBeWatched = ({ userEmail }) => {
     console.log('Fetching movies fetchWatchLaterMovies',data);
   };
 
+  const handleAddToWatchingNow = async(movie) => {
+    const userEmail = 'p4shage@gmail.com';
+    try{
+      const response = await fetch('http://localhost:5000/api/watching', {
+        method: 'POST',
+        headers:{
+          'Content-type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: userEmail,
+          movieId: movie.filmId,
+          movieData: movie,
+        }),
+      });
+
+      if(response.ok){
+        setMovies(movies.filter(m => m.filmId !== movie.filmId));
+        setIsInfoVisible(false);
+        alert('Movie added to watching');
+      }
+    } catch(err){
+      console.error('Failed to add movie to watching now: ', err);
+    }
+  }
+
+  const handleAddToWatched = async(movie) => {
+    const userEmail = 'p4shage@gmail.com';
+    try{
+      const response = await fetch('http://localhost:5000/api/watched', {
+        method: 'POST',
+        headers:{
+          'Content-type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: userEmail,
+          movieId: movie.filmId,
+          movieData: movie,
+        }),
+      });
+
+      if(response.ok){
+        setMovies(movies.filter(m => m.filmId !== movie.filmId));
+        setIsInfoVisible(false);
+        alert('Movie added to watched');
+      }
+
+    } catch(err){
+      console.error('Failed to add movie to watched: ', err);
+    }
+  }
+
   const handleMovieSelect = (movie) =>{
     setSelectedMovie(movie);
     setIsInfoVisible(true);
@@ -55,7 +106,8 @@ const ToBeWatched = ({ userEmail }) => {
               <div className='movie-container'>
                 <MovieInfo
                   movie={selectedMovie}
-                  //onAdddToWathingNow = {}
+                  onAddToWatchingNow = {handleAddToWatchingNow}
+                  onAddToWatched = {handleAddToWatched}
                   onClose = {() => setIsInfoVisible(false)}
                 />
               </div>
