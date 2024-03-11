@@ -1,0 +1,110 @@
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #212426;
+}
+
+.login-form {
+    padding: 1rem;
+    margin: 50px auto;
+    border-radius: 12px;
+    box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+    background: #1f2123;
+    display: flex;
+    flex-direction: column;
+    width: 310px; 
+}
+
+.login-form h2{
+    text-align: center;
+    color: white;
+}
+
+.form-group label {
+    display: block;
+    color: #f9d3b4;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    border: none;
+    padding-bottom: 10px;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    background: #343739;
+    color: #f0f0f0; 
+    font-size: 1rem;
+}
+
+.input-field{
+    width: 100%;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.input-field::placeholder{
+    color: #888;
+}
+
+.error-message {
+    color: #cf050f;
+    background-color: #ffb9b9;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #d8000c;
+    text-align: center;
+}
+
+.login-button, .register-button {
+    border: none;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+.login-button{    
+    background-color: rgb(0,128,128);
+}
+
+.register-button {
+    background-color: rgb(30, 55, 124);
+}
+
+.login-button:hover {
+    background-color: rgb(12, 77, 77);
+    transition-delay: 0.1s;
+}
+
+.register-button:hover{
+    background-color: rgb(22, 40, 92);
+    transition-delay: 0.1s;
+}
+
+.register-button {
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 600px) {
+    .login-form {
+        padding: 2rem;
+        width: 100%;
+    }
+
+    .form-group input, .login-button, .register-button {
+        padding: 0.5rem;
+    }
+}

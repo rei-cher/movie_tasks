@@ -1,14 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useAuth } from '../authentication/AuthContext';
 
 import MovieCard from '../cards/MovieCard';
 import MovieInfo from '../movie_info/MovieInfo';
 
 import './Watching.css';
 
-const Watching = ({userEmail}) => {
+const Watching = () => {
   const [movies, setMovies] = useState([]);
   const [selectedMovie, setSelectedMovie] = useState(false);
   const [isInfoVisible, setIsInfoVisible] = useState(false);
+
+  const {userEmail} = useAuth();
 
   const fetchedRef = useRef(false);
   
