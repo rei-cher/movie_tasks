@@ -100,6 +100,25 @@
     transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
 
+.back-button{
+    border: none;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    background-color: rgb(255, 60, 60);
+    color: white;
+    text-align: center;
+    font-style: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+.back-button:hover {
+    background-color: rgb(202, 27, 27); /* Darker shade on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
 @media screen and (max-width: 600px) {
     .signup-form {
         padding: 2rem;

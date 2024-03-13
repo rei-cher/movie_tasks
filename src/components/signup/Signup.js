@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {useNavigate} from 'react-router-dom';
+import {Link, Navigate, useNavigate} from 'react-router-dom';
 
 import './Signup.css';
 
@@ -126,6 +126,7 @@ const Signup = () => {
           </div>
 
           <button type='submit' className='signup-button'>Sign Up</button>
+          <Link to='/' className='back-button'>Back</Link>
 
         </form>
       )}
